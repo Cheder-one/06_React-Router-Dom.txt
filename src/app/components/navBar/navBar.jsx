@@ -7,7 +7,7 @@ const NavBar = () => {
         <a href="/">Главная</a>
       </li>
       <li>
-        <a href="/singin">Вход в кабинет</a>
+        <a href="/login">Вход в кабинет</a>
       </li>
       <li>
         <a href="/posts">Записи</a>
