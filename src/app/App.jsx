@@ -1,18 +1,20 @@
-import Home from "./components/navBar/home";
-import Login from "./components/navBar/login";
-import NavBar from "./components/navBar/navBar";
-import { Route } from "react-router-dom";
-import Posts from "./components/navBar/posts";
-import Contacts from "./components/navBar/contacts";
+import Home from "./components/navigation/home";
+import Login from "./components/navigation/login";
+import NavBar from "./components/navigation/navBar";
+import { Route, Switch } from "react-router-dom";
+import Posts from "./components/navigation/posts";
+import Contacts from "./components/navigation/contacts";
 
 function App() {
   return (
     <>
       <NavBar />
-      <Route path="/" exact component={Home} />
-      <Route path="/login" exact component={Login} />
-      <Route path="/posts" exact component={Posts} />
-      <Route path="/contacts" exact component={Contacts} />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/login" component={Login} />
+        <Route path="/posts" component={Posts} />
+        <Route path="/contacts" component={Contacts} />
+      </Switch>
     </>
   );
 }
