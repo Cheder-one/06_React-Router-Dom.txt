@@ -26,7 +26,7 @@ const Posts = ({ match, location }) => {
   return (
     <>
       {showOffer && (
-        <h3 className="text-success" style={{ "font-weight": "bold" }}>
+        <h3 className="text-success" style={{ fontWeight: "bold" }}>
           Специальное предложение
         </h3>
       )}
