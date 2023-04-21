@@ -24,6 +24,14 @@ const NavBar = () => {
           Контакты
         </Link>
       </li>
+      <li className="nav-item">
+        <Link
+          className="nav-link"
+          to="/posts?fromUrl=https://example.partner.com&block=pr_1"
+        >
+          Партнерская ссылка
+        </Link>
+      </li>
     </ul>
   );
 };
