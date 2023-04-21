@@ -17,17 +17,19 @@ function App() {
   return (
     <>
       <NavBar />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/posts/:postId">
-          {(props) => <Post {...props} posts={posts} />}
-        </Route>
-        <Route path="/posts" component={Posts}>
-          {(props) => <PostsList {...props} posts={posts} />}
-        </Route>
-        <Route path="/contacts" component={Contacts} />
-      </Switch>
+      <div className="ms-3 mt-2">
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/login" component={Login} />
+          <Route path="/posts/:postId">
+            {(props) => <Post {...props} posts={posts} />}
+          </Route>
+          <Route path="/posts" component={Posts}>
+            {(props) => <PostsList {...props} posts={posts} />}
+          </Route>
+          <Route path="/contacts" component={Contacts} />
+        </Switch>
+      </div>
     </>
   );
 }
