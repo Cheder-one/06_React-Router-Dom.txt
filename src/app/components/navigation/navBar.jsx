@@ -24,11 +24,6 @@ const NavBar = () => {
           Контакты
         </Link>
       </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/posts/123">
-          Posts/123
-        </Link>
-      </li>
     </ul>
   );
 };

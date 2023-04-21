@@ -1,14 +1,12 @@
 import React from "react";
 
-const Post = ({ match, posts }) => {
-  const postId = match.params.postId;
-
-  const getPost = (postId) => {
-    return posts.find((post) => String(post.id) === postId);
+const Post = ({ id, posts }) => {
+  const getPost = (id) => {
+    return posts.find((post) => String(post.id) === id);
   };
-  const post = getPost(postId);
+  const post = getPost(id);
 
-  return <h1>{post ? post.title : `Post id: ${postId} is not found`}</h1>;
+  return <h1>{post ? post.title : `Post id: ${id} is not found`}</h1>;
 };
 
 export default Post;
