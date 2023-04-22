@@ -3,7 +3,7 @@ import Post from "../post";
 import PostsList from "../postsList";
 import query from "query-string";
 
-const Posts = ({ match, location }) => {
+const Posts = ({ match, location, history }) => {
   const [showOffer, setShowOffer] = useState(false);
 
   const posts = [
@@ -31,7 +31,7 @@ const Posts = ({ match, location }) => {
         </h3>
       )}
       {postId ? (
-        <Post id={postId} posts={posts} />
+        <Post id={postId} posts={posts} history={history} />
       ) : (
         <PostsList posts={posts} />
       )}
