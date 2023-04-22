@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import Post from "../post";
 import PostsList from "../postsList";
 import query from "query-string";
+import { useLocation, useParams } from "react-router-dom";
 
-const Posts = ({ match, location, history }) => {
+const Posts = () => {
   const [showOffer, setShowOffer] = useState(false);
+  const location = useLocation();
 
   const posts = [
     { id: 1, title: "Post 1" },
@@ -21,7 +23,7 @@ const Posts = ({ match, location, history }) => {
     }
   }, [fromUrl, block, showOffer]);
 
-  const postId = match.params.postId;
+  const { postId } = useParams();
 
   return (
     <>
@@ -31,7 +33,7 @@ const Posts = ({ match, location, history }) => {
         </h3>
       )}
       {postId ? (
-        <Post id={postId} posts={posts} history={history} />
+        <Post id={postId} posts={posts} />
       ) : (
         <PostsList posts={posts} />
       )}
